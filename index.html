@@ -25,10 +25,21 @@
     <div id="modal" class="fixed inset-0 bg-black/40 hidden backdrop-blur-sm p-6 flex items-center justify-center z-20">
         <div class="bg-[#F9F7F2] w-full max-w-md p-8 rounded-lg shadow-xl">
             <h2 class="text-2xl mb-6">New Entry</h2>
-            <input type="text" id="nameInp" placeholder="Name" class="w-full mb-4 p-2 border-b border-black/20 bg-transparent outline-none">
-            <input type="text" id="placeInp" placeholder="Place" class="w-full mb-4 p-2 border-b border-black/20 bg-transparent outline-none">
-            <input type="number" id="amountInp" placeholder="Amount" class="w-full mb-6 p-2 border-b border-black/20 bg-transparent outline-none">
-            <div class="flex justify-between">
+            <input type="text" id="nameInp" placeholder="Name" class="w-full mb-4 p-2 border-b border-black/20 bg-transparent outline-none font-sans">
+            <input type="text" id="placeInp" placeholder="Place" class="w-full mb-4 p-2 border-b border-black/20 bg-transparent outline-none font-sans">
+            <input type="number" id="amountInp" placeholder="Amount (₹)" class="w-full mb-4 p-2 border-b border-black/20 bg-transparent outline-none font-sans">
+
+<select id="occasionInp" class="w-full mb-4 p-2 border-b border-black/20 bg-transparent outline-none font-sans text-gray-500">
+    <option value="His/Her Own Marriage">His/Her Own Marriage</option>
+    <option value="Son's Marriage">Son's Marriage</option>
+    <option value="Daughter's Marriage">Daughter's Marriage</option>
+    <option value="Other">Other Event</option>
+</select>
+
+<div class="flex items-center mb-6 font-sans text-sm">
+    <input type="checkbox" id="trackReturn" class="mr-2">
+    <label for="trackReturn">Expect return for Brother's Wedding?</label>
+</div>
                 <button onclick="toggleModal()" class="opacity-50">Cancel</button>
                 <button onclick="addEntry()" class="bg-[#1A1A1A] text-white px-6 py-2 rounded">Save</button>
             </div>
