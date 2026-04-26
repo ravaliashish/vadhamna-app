@@ -1,0 +1,8 @@
+{
+  "short_name": "Vadhamna",
+  "name": "Vadhamna Digital Ledger",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#F9F7F2",
+  "theme_color": "#F9F7F2"
+}
