@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Vadhamna Vault</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body class="bg-[#F9F7F2] text-[#1A1A1A] font-serif">
+
+    <header class="sticky top-0 bg-[#F9F7F2]/90 backdrop-blur-md border-b border-black/10 p-6 z-10">
+        <h1 class="text-sm uppercase tracking-widest opacity-60">Total Vadhamna</h1>
+        <div id="grandTotal" class="text-4xl font-light">₹ 0</div>
+        
+        <input type="text" id="searchInput" placeholder="Search name or place..." 
+               class="w-full mt-4 p-2 bg-transparent border-b border-black/20 focus:outline-none focus:border-black font-sans">
+    </header>
+
+    <main id="entriesList" class="p-6 space-y-4 pb-32">
+        </main>
+
+    <button onclick="toggleModal()" class="fixed bottom-8 right-8 bg-[#1A1A1A] text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl">+</button>
+
+    <div id="modal" class="fixed inset-0 bg-black/40 hidden backdrop-blur-sm p-6 flex items-center justify-center z-20">
+        <div class="bg-[#F9F7F2] w-full max-w-md p-8 rounded-lg shadow-xl">
+            <h2 class="text-2xl mb-6">New Entry</h2>
+            <input type="text" id="nameInp" placeholder="Name" class="w-full mb-4 p-2 border-b border-black/20 bg-transparent outline-none">
+            <input type="text" id="placeInp" placeholder="Place" class="w-full mb-4 p-2 border-b border-black/20 bg-transparent outline-none">
+            <input type="number" id="amountInp" placeholder="Amount" class="w-full mb-6 p-2 border-b border-black/20 bg-transparent outline-none">
+            <div class="flex justify-between">
+                <button onclick="toggleModal()" class="opacity-50">Cancel</button>
+                <button onclick="addEntry()" class="bg-[#1A1A1A] text-white px-6 py-2 rounded">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
